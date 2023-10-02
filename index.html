@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet" />
-    <link rel="stylesheet" href="/dist/style.css" />
+    <link rel="stylesheet" href="/app/scss/style.css" />
 
     <title>InvestYakutia</title>
   </head>
 
   <body>
+   
     <header class="header">
       <nav class="container">
+        
         <div class="header__logo">
           <a href="/">
             <img src="images/logo.svg" alt="" />
@@ -28,9 +30,11 @@
         </div>
 
         <div class="header__icons">
+          
           <a id="linkLang" href="">
             <img id="langBtn" src="images/language.svg" alt="" />
           </a>
+          
           <div id="languageMenu" class="lang_menu">
             <a href="#">Ru</a>
             <a href="#">En</a>
@@ -38,13 +42,16 @@
             <a href="#">Ch</a>
             <a href="#">Ko</a>
           </div>
+          
           <a id="linkGlasses" href="">
             <img id="glassesBtn" src="images/glasses.svg" alt="" />
           </a>
+          
           <a id="linkSearch" href="">
             <img id="searchBtn" src="images/search.svg" alt="" />
           </a>
-          <a id="menuBtn" href="#" class="header__menu open">
+          
+          <a id="menuBtn" href="#" class="header__menu">
             <span></span>
             <span></span>
             <span></span>
@@ -55,26 +62,32 @@
 
     <section class="container hero">
       <div class="hero__title">
-        <h1>Якутия - территория инвестиций</h1>
+        <h1>Якутия - территория<br> инвестиций</h1>
         <button>Подать заявку</button>
       </div>
+      
+      <div class="hero__time">
+        <p id="current_time">00:00</p>
+        <div class="timeline">
+          <div class="line"></div>
+          <div id="pointTime" class="point_time"></div>
+        </div>
+      </div>
 
-      <div class="orbit">
-        <div class="point"></div>
-        <div class="title">Заголовок 1</div>
-        <div class="point"></div>
-        <div class="title">Заголовок 2</div>
-        <div class="point"></div>
-        <div class="title main-title">Главный заголовок</div>
-        <div class="point"></div>
-        <div class="title">Заголовок 4</div>
-        <div class="point"></div>
-        <div class="title">Заголовок 5</div>
-    </div>
-    <button id="rotateButton">Повернуть</button>
-    </section>
+      <div id="orbit" class="hero__orbit">
+      
+        <span><a><p>Инвестплощадки</p></a></span>
+        <span><a><p>Инвесткарта</p></a></span>
+        <span><a><p>Подать заявку</p></a></span>
+        <span><a><p>Задать вопрос</p></a></span>
+        <span><a><p>Меры поддержки</p></a></span>
+    
+        <img src="/images/orbit-center.svg" alt="" class ='orbit__center'>
+      </div>
 
-    <!-- <section class="rating container">
+     </section>
+
+    <section class="rating container">
       <div class="rating__title"><h1>Cила Якутии</h1></div>
 
       <div class="points flex flex-jc-sb">
@@ -140,8 +153,10 @@
           <p>Агенство</p>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <script src="app/js/script.js"></script>
+    <script src="app/js/script.js">
+
+    </script>
   </body>
 </html>

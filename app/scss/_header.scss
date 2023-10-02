@@ -18,6 +18,7 @@
 
   .header__icons {
     display: inherit;
+    z-index: 1;
     align-items: inherit;
     > a {
       &:not(:first-child) {
@@ -78,6 +79,7 @@
 }
 
 .lang_menu {
+  
   clip-path: polygon(50% 5%, 60% 8%, 100% 8%, 100% 100%, 0 100%, 0 8%, 40% 8%);
   display: none;
   position: absolute;
@@ -89,6 +91,7 @@
   padding-bottom: 6px;
   padding-left: 18px;
   padding-right: 18px;
+
   > a {
     text-align: center;
     display: block;
@@ -126,69 +129,3 @@
     }
   }
 }
-
-// .header {
-
-//   border-bottom: solid $white 1px;
-
-//   nav {
-//     padding: 22px 70px;
-//   }
-
-//   div {
-//     &:not(:first-child) {
-//       margin-left: 27px;
-//     }
-//   }
-
-//   &__logo {
-//     img {
-//     }
-//   }
-
-//   &__icons {
-//     a {
-//       &:not(:first-child) {
-//         margin-left: 27px;
-//       }
-//       vertical-align: middle;
-//     }
-//   }
-
-//   &__menu {
-
-//     //mobile version of menu
-//     > span {
-//       display: block;
-//       width: 32px;
-//       height: 3px;
-//       &:not(:first-child) {
-//         margin-top: 7px;
-//       }
-
-//       background-color: $white;
-
-//       &:not(:last-child) {
-//         margin-bottom: 3px;
-//       }
-//     }
-//   }
-
-//   &__links {
-
-//     a {
-//       font-size: $font-main;
-//       font-weight: $fw-main;
-//       text-transform: uppercase;
-//       &:not(:first-child) {
-//         margin-left: 27px;
-//       }
-//       &:hover {
-//         color: $red;
-//       }
-//     }
-//   }
-// }
-
-
-

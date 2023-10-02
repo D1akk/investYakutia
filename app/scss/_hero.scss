@@ -1,41 +1,164 @@
 .hero {
-  background-image: url("/images/hero.svg");
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
+  margin-right: -300px;
+  background-image: url("/images/hero.svg");
+  background-size: auto;
+  background-repeat: repeat-x;
+  justify-content: space-between;
   
-  .orbit {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border: 2px solid #333;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    transform-origin: center;
-  }
-
-  .point {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border-radius: 50%;
-  }
-
-  .title {
-    position: absolute;
-    top: -20px;
-    text-align: center;
-    font-size: 14px;
-    &.main-title {
+  .hero__title{
+    display: block;
+    margin-top: 243px;
+    margin-bottom: 179px;
+    >h1{
+      font-size: 50px;
+      color: $white;
+      line-height: 70px;
+      font-weight: 600;
+      letter-spacing: 6%;
+    }
+    >button{
+      margin-top: 30px;
+      border:0;
+      color: $white;
+      background-color: #FF1A1A;
       font-size: 16px;
-      font-weight: bold;
+      padding:13px 35px 13px 35px;
     }
   }
+
+  .hero__time{
+    position: relative;
+    display: flex;
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 6%;
+    position: relative;
+    align-items: end;
+    >p{
+      margin-bottom: 45px;
+    }
+    .timeline {
+      position: absolute;
+      margin-bottom: 35px;
+      transform: translateX(-40%);
+      width:200px;
+      height: 2px; 
+      background-color: #ccc; 
+  }
+  
+    
+  
+    .point_time {
+        position: absolute;
+        width: 20px; 
+        height: 20px; 
+        background-color: #ff0000;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+  
+  
+}
+
+  
+  
+  .hero__orbit{
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    
+    >span{
+      pointer-events: none;
+      display:flex;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    
+      position: absolute;
+      transform-origin: 100%;
+      background-color: $white;
+      text-align: right;
+
+      >a{ 
+        font-size: 14px;
+        white-space: nowrap;
+        position: relative;
+        >p{
+          pointer-events: all;
+          cursor: pointer;
+          width: 200px;
+          text-align: end;
+          translate: -210px;
+        }
+      }
+
+      &:nth-child(1){
+        background-color: #FF1A1A;
+        > a{
+          font-size: 24px;
+          translate: 0px -5px;
+        }
+        transform: rotate(0deg) translate(-250px) rotate(0deg);
+      }
+      &:nth-child(2){
+        transform: rotate(22.5deg) translate(-247.5px) rotate(-10deg);
+      } 
+      &:nth-child(3){
+        transform: rotate(45deg) translate(-245px) rotate(-15deg);
+      }
+      &:nth-child(4){
+        transform: rotate(-45deg) translate(-245px) rotate(15deg);
+      }
+      &:nth-child(5){
+        transform: rotate(-22.5deg) translate(-247.5px) rotate(10deg);
+      }
+    }
+
+    &.clicked{
+      span:nth-child(5){
+        transform: rotate(45deg) translate(-250px) rotate(45deg);
+      }
+      span:nth-child(1){
+        transform: rotate(22.5deg) translate(-250px) rotate(22.5deg);
+      } 
+      span:nth-child(2){
+        transform: rotate(0deg) translate(-250px) rotate(0deg);
+        background-color: #FF1A1A;
+
+      }
+      span:nth-child(3){
+        transform: rotate(-22.5deg) translate(-250px) rotate(-22.5deg);
+      }
+      span:nth-child(4){
+        transform: rotate(-45deg) translate(-250px) rotate(-45deg);
+      }
+    }
+  }
+
+  
+}
+#time {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+@media screen and (max-width: 768px){
+  .hero{
+    .hero__orbit{
+      display:none;
+    }
+  }
+  
 }
