@@ -1,0 +1,47 @@
+.standarts {
+  height: 566px;
+  color: $white;
+  &__title {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .cards {
+    // flex-wrap: wrap;
+  }
+  .card {
+    border: solid $white 1px;
+    width: 244px;
+    height: 300px;
+    position: relative;
+    
+    > img {
+      padding-left: 20px;
+      padding-top: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    }
+
+    > p {
+      padding-left: 20px;
+      padding-bottom: 20px ;
+      justify-content: end;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    background-image: transparent;
+    transition: background-image 0.3s ease-in-out;
+
+    &:hover {
+      background-image: url("/images/choosed-card.svg");
+    }
+  }
+}
